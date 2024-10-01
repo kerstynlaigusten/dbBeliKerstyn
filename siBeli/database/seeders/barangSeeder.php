@@ -21,7 +21,7 @@ class barangSeeder extends Seeder
                 'stok' => '10',
                 'status' => 'Ada',
                 'satuan' => '1kg',
-                'namaBarang' => 'Marmer',
+                'namaBarang' => $faker->namaBarang,
                 'kodeBarang' => '1234',
             ]);
         }

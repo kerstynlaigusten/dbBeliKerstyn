@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('barangs', function (Blueprint $table) {
             $table->id();
-            $table->int('hargaJual', length: 10) ->primary();
-            $table->int('hargaBeli', length: 10) ->foreign();
-            $table->int('stok', length: 30);
+            $table->integer('hargaJual');
+            $table->integer('hargaBeli');
+            $table->integer('stok');
             $table->char('status', length: 5);
-            $table->int('satuan', length: 5);
-            $table->varchar('namaBarang', length: 10) ->unique();
-            $table->int('kodeBarang', length: 6) ->unique();
+            $table->integer('satuan');
+            $table->char('namaBarang', length: 10);
+            $table->integer('kodeBarang');
             $table->timestamps();
         });
     }

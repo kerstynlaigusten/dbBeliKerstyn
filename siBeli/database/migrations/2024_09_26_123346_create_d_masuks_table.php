@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('d_masuks', function (Blueprint $table) {
             $table->id();
-            $table->varchar('idMasuk', length: 10); primary();
-            $table->int('kodeMasuk', length: 6); foreign();
-            $table->int('kodeBarangbeli', length: 6); unique();
-            $table->int('jumlah', length: 30); 
-            $table->int('subtotal', length: 40);
+            $table->char('idMasuk', length: 10);
+            $table->integer('kodeMasuk');
+            $table->integer('kodeBarangbeli');
+            $table->integer('jumlah'); 
+            $table->integer('subtotal');
             $table->timestamps();
         });
     }

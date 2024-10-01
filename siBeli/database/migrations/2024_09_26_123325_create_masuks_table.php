@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('masuks', function (Blueprint $table) {
             $table->id();
-            $table->int('kodeMasuk', length: 6); primary();
-            $table->int('tanggalMasuk', length: 6); unique();
-            $table->int('kodeAdmin', length: 6); unique();
-            $table->int('kodeSupplier', length: 6); foreign();
-            $table->int('totalMasuk', length: 30); unique();
+            $table->integer('kodeMasuk');
+            $table->integer('tanggalMasuk');
+            $table->integer('kodeAdmin');
+            $table->integer('kodeSupplier');
+            $table->integer('totalMasuk');
             $table->timestamps();
         });
     }
